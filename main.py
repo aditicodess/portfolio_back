@@ -11,7 +11,7 @@ CORS(app)
 def before_request():
     print("Establishing connection with the database")
     g.db = pymysql.connect(
-        user="root", password="Aditi@2905", db="portfolio", unix_socket="/tmp/mysql.sock", autocommit=True
+        host="127.0.0.1", user="root", password="Aditi@2905", db="portfolio", autocommit=True
     )
     g.cursor = g.db.cursor()
 
